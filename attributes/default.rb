@@ -1,0 +1,1 @@
+default['treegraft']['root'] = '/'

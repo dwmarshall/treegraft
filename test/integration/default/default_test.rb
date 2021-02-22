@@ -1,16 +1,7 @@
-# InSpec test for recipe treegraft::default
-
-# The InSpec reference, with examples and extensive documentation, can be
-# found at https://docs.chef.io/inspec/resources/
-
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+describe file('/subtree/absolutedir/somefile') do
+  it { should exist }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+describe file('/subtree/relativedir/otherfile') do
+  it { should exist }
 end
