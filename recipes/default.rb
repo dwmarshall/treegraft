@@ -6,6 +6,7 @@
 require 'pathname'
 
 directory Chef.node['treegraft']['root'] do
+  not_if { ::Dir.exist? Chef.node['treegraft']['root'] }
   action :nothing
 end.run_action(:create)
 
