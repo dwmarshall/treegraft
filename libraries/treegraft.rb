@@ -2,6 +2,7 @@ module Treegraft
   def lookup_path(file, *parts, **options)
     delimiter = options[:delimiter] || '/'
     list = []
+    parts.compact!
     until parts.empty?
       list.push('/' << parts.join(delimiter) << '/')
       parts.pop

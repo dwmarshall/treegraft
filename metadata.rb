@@ -3,7 +3,7 @@ maintainer 'David Marshall'
 maintainer_email 'dmarshall@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures treegraft'
-version '0.1.2'
+version '0.1.3'
 chef_version '>= 15.0'
 
 issues_url 'https://github.com/dwmarshall/treegraft/issues'

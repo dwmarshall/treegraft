@@ -17,6 +17,11 @@ describe Treegraft do
       .to eq(['/path1/path2/baz', '/path1/baz', '/default/baz', '/baz'])
   end
 
+  it 'discards nil components' do
+    expect(described_class.lookup_path('blort', nil, nil))
+      .to eq(['/default/blort', '/blort'])
+  end
+
   it 'can accept a different delimiter' do
     expect(described_class.lookup_path('frotz', 'path1', 'path2', delimiter: '-'))
       .to eq(['/path1-path2/frotz', '/path1/frotz', '/default/frotz', '/frotz'])

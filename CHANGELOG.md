@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of the treegraft cookbook.
 
+## 0.1.3
+
+### Changed
+- reject nil path components
+
 ## 0.1.2
 
 ### Added
