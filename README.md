@@ -13,9 +13,14 @@ end
 ```
 
 If you include `treegraft::default` in the runlist and set `node['treegraft']['root']` to `/arbitrary`, then Chef will touch the file `/arbitrary/empty_file.txt`.
+
 ## Use Case
 
 The use case for which this cookbook was written is that of using a cookbook to manage files in source code repositories, which are typically not rooted at `/`.
+
+## Libraries
+
+This cookbook makes available a method `Treegraft.lookup_path` that can be used to create a list of places that a resources `source` property should check. See its source or tests for more details.
 
 ## Limitations
 
